@@ -1,0 +1,40 @@
+.input {
+  border-radius: 0.5rem;
+  border: 0.1rem solid #757575;
+  padding: 0.5rem;
+}
+
+.input:focus {
+  outline-color: #84C868;
+}
+
+.disabled {
+  border-radius: 0.5rem;
+  background-color: #7575751A;
+  background: #7575751A 0% 0% no-repeat padding-box;
+  color: #7575751A;
+  border: 0;
+  padding: 0.5rem;
+}
+
+.error {
+  border-radius: 0.5rem;
+  border: 0.1rem solid #D92D20;
+  padding: 0.5rem;
+}
+
+.error:focus {
+  outline-color: #D92D20;
+}
+
+.errormessage {
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #D92D20;
+}
+
+.icon {
+  position: absolute;
+  text-align: center;
+  padding: 10px 10px 10px 130px;
+}
