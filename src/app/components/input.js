@@ -22,7 +22,7 @@ export default function Input({label, placeholder, type = "text", disabled = fal
   const validateInput = () => {
     const isValidValueForType = {
       email: (value) => {
-        return value.includes("@");
+        return value.includes("@") && (value.endsWith(".com") || value.endsWith(".com.br"));
       },
       text: (value) => {
         return value.length > 0;
