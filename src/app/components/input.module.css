@@ -11,7 +11,6 @@
 .disabled {
   border-radius: 0.5rem;
   background-color: #7575751A;
-  background: #7575751A 0% 0% no-repeat padding-box;
   color: #7575751A;
   border: 0;
   padding: 0.5rem;
@@ -37,4 +36,8 @@
   position: absolute;
   text-align: center;
   padding: 10px 10px 10px 130px;
+}
+
+.labelpadding {
+  padding-bottom: 0.1rem;
 }

@@ -23,6 +23,8 @@ function Home() {
           <br/>
           <Input placeholder="Placeholder" label="Label test"/>
           <br/>
+          <Input placeholder="Placeholder" label="Label test" type="email"/>
+          <br/>
           <Input placeholder="Desabilitado" disabled={true}/>
           <br/>
         </div>

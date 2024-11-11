@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./input.module.css";
 import Label from "./label";
 
-export default function Input({placeholder, label, disabled = false}) {
+export default function Input({label, placeholder, type = "text", disabled = false}) {
   const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("Valor inválido");
+  const inputRef = useRef(null);
 
   const getStyle = () => {
     if (disabled) {
@@ -15,28 +17,51 @@ export default function Input({placeholder, label, disabled = false}) {
       return styles.error;
     }
     return styles.input;
-  }
+  };
+
   const validateInput = () => {
-    console.log("should do something here")
-    setHasError(!hasError);
-  }
+    const isValidValueForType = {
+      email: (value) => {
+        return value.includes("@");
+      },
+      text: (value) => {
+        return value.length > 0;
+      },
+    };
+    const errorMessageForType = {
+      email: "E-mail inválido",
+      text: "Valor inválido",
+    }
+    const isInvalid = !isValidValueForType[type](inputRef.current.value);
+    setHasError(isInvalid);
+    if (isInvalid) {
+      setErrorMessage(errorMessageForType[type]);
+    }
+  };
 
   return (
     <>
-      {label && <Label text={label}/>}
-      {label && <br/>}
-      <input
-        className={getStyle()}
-        placeholder={placeholder}
-        disabled={disabled}
-        onChange={() => validateInput(!hasError)}
-      />
-      <br />
+      {label &&
+        <div className={styles.labelpadding}>
+          <Label text={label}/>
+        </div>
+      }
+      <div>
+        <input
+          ref={inputRef}
+          className={getStyle()}
+          placeholder={placeholder}
+          disabled={disabled}
+          onChange={() => validateInput()}
+          type={type}
+        />
+        <br />
+      </div>
       {hasError &&
         <text
           className={styles.errormessage}
         >
-            Mensagem de erro
+            {errorMessage}
         </text>
       }
     </>
