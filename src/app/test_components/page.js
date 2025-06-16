@@ -3,6 +3,7 @@ import Button, { ButtonStyle } from "../components/button";
 import Icons from "../constants/icons";
 import Table from "../components/table";
 import Select from "../components/select";
+import Map from "../components/googleMap";
 
 function TestComponents() {
   const mockedItems = [
@@ -13,6 +14,7 @@ function TestComponents() {
 
   return (
     <div style={{backgroundColor: "#F6F6F6", height: "100rem"}}>
+      <Map/>
       <div style={{margin: "1rem"}}>
         <span style={{color: "black"}}>Testes select</span>
         <br/>
