@@ -1,3 +1,5 @@
+'use client';
+
 import styles from "./select.module.css"
 import Label from "./label";
 
