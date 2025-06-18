@@ -26,7 +26,24 @@ export default function FilterPopup({enablePopupFunction: any}) {
     };
     
     modal.current.animate(appearingFromTop, modalTiming);    
+    tagSelector();
   }, [modal])
+
+  function tagSelector() {
+    const filterTags = document.getElementById('tagFilter').querySelectorAll('.tag');
+    const sorterTags = document.getElementById('tagSorter').querySelectorAll('.tag');
+    addActiveTagEventListener(filterTags);
+    addActiveTagEventListener(sorterTags);
+  }
+
+  function addActiveTagEventListener(tags) {
+    tags.forEach(tag => {
+      tag.addEventListener('click', () => {
+          tags.forEach(btn => btn.classList.remove('active'));
+          tag.classList.add('active');
+      });
+    });  
+  }
 
   return popupEnabled && (
     <div 
@@ -46,21 +63,44 @@ export default function FilterPopup({enablePopupFunction: any}) {
       display: "flex",
       flexWrap: "wrap",
       textAlign: "center",
-      justifyContent: "center"
+      // justifyContent: "center"
     }}>
-      <form
-        id="contactForm"
-        className="form"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%"                    
-        }}
-      >
-        <Input label="Filtro 1" placeholder="filtro test"/>
-        <Input label="Filtro 2" placeholder="filtro test"/>
-        <Input label="Filtro 3" placeholder="filtro test"/>
-      </form>
+
+      <span style={{
+        color: "#39542D",
+        fontWeight: "bolder",
+        fontSize: "1rem",
+        width: "50%",
+        font: "normal normal bold 16px/24px 'Montserrat'",
+        fontFamily: "'Montserrat', sans-serif",
+        display: "flex",
+        justifyContent: "left",
+        alignItems: "center"
+      }}>Filtrar</span>
+      <div id="tagFilter" className="tag-filter" style={
+        {width: "100%", display: "flex", justifyContent: "left", alignItems: "center"}}>
+          <button className="tag" data-filter="filter1">Placeholder</button>
+          <button className="tag" data-filter="filter2">Placeholder</button>
+          <button className="tag active" data-filter="filter3">Selecionado</button>          
+      </div>
+
+      <span style={{
+        color: "#39542D",
+        fontWeight: "bolder",
+        fontSize: "1rem",
+        width: "50%",
+        font: "normal normal bold 16px/24px 'Montserrat'",
+        fontFamily: "'Montserrat', sans-serif",
+        display: "flex",
+        justifyContent: "left",
+        alignItems: "center"
+      }}>Ordenar</span>
+      <div id="tagSorter" className="tag-filter" style={
+        {width: "100%", display: "flex", justifyContent: "left", alignItems: "center"}}>
+          <button className="tag" data-filter="sort1">Ordem A-Z</button>
+          <button className="tag" data-filter="sort2">Ordem Z-A</button>
+          <button className="tag active" data-filter="sort3">Proximidade</button>          
+      </div>
       
       <div style={
         {width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>        
