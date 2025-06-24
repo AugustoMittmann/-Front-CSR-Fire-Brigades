@@ -84,12 +84,6 @@ a {
 	transition: background-color 0.3s, color 0.3s;
 }
 
-/* .tag-filter {
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 20px;
-} */
-
 .tag.active {	
   background-color: #FFF;
   font-family: "Montserrat";  
@@ -102,24 +96,3 @@ a {
   height: 40px;
   opacity: 1;
 }
-
-
-/* .tag {
-  background-color: #FFF;
-  font-family: "Montserrat";
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 48%;
-  color: #39542D;
-  font-weight: 600;
-  letter-spacing: 0.01rem;  
-  border-radius: 0.5rem;
-  border-color: #39542D;  
-  margin-top: "5rem";
-  opacity: 0.5;
-  padding: 0 12%;
-  padding-right: 0%;
-  height: 40px;
-	transition: background-color 0.3s, color 0.3s;
-} */

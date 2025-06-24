@@ -26,16 +26,7 @@ const DynamicRadioButtons = ({ options, onSelect }) => {
             checked={selectedOption === option.value}
             onChange={handleOptionChange}
             className={styles.radiobutton}
-            // style={{
-            //     width: "24px",
-            //     height: "24px",
-            //     appearance: "none",
-            //     borderRadius: "50%",
-            //     cursor: "pointer",
-            //     border: "2px solid #ccc",
-            //     marginRight: "8px",
-            // }}
-            />
+          />
           <label htmlFor={option.value} style={{
             font: "normal normal 16px/24px 'Montserrat'"
             }}>{option.label}</label>
@@ -44,29 +35,5 @@ const DynamicRadioButtons = ({ options, onSelect }) => {
     </div>
   );
 };
-
-
-{/* <div key={option.value} style={{
-                    width: "100%", 
-                    display: "flex",
-            }}>
-                <input
-                    type="checkbox"
-                    id={option.value}            
-                    value={option.value}
-                    checked={selectedOption === option.value}
-                    onChange={handleOptionChange}
-                    style={{
-                        width: "24px",
-                        height: "24px",
-                        borderRadius: "50%",
-                        appearance: "none",
-                        backgroundColor: "#f0f0f0",
-                        border: "2px solid #ccc",
-                        cursor: "pointer",
-                        outline: "none",
-                        marginRight: "8px",
-                    }}
-                /> */}
 
 export default DynamicRadioButtons;
