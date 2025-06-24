@@ -1,0 +1,24 @@
+.tag {
+    background-color: #FFF;
+    font-family: "Montserrat";
+    width: 48%;
+    color: #39542D;
+    border-radius: 0.5rem;
+    border-color: #39542D;  
+    opacity: 0.5;
+    height: 40px;
+      transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .activetag {	
+    background-color: #FFF;
+    font-family: "Montserrat";  
+    width: 48%;
+    color: #39542D;    
+    border-radius: 0.5rem;
+    border-color: #39542D;
+    font-weight: 600;  
+    border-width: 1.5px;  
+    height: 40px;
+    opacity: 1;
+  }

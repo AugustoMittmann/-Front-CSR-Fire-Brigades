@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "./dynamicRadioButton.module.css";
+import styles from "./dynamicRadioButtons.module.css";
 
 const DynamicRadioButtons = ({ options, onSelect }) => {
   const [selectedOption, setSelectedOption] = useState(null);

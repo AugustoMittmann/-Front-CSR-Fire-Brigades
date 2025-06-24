@@ -3,7 +3,8 @@
 import Button from "@/app/components/button";
 import { useEffect, useRef } from "react";
 import { useState } from 'react'
-import DynamicRadioButtons from "./dynamicRadioButton";
+import DynamicRadioButtons from "./dynamicRadioButtons";
+import styles from "./filterPopup.module.css";
 
 export default function FilterPopup({isOpen, onClose}) {
   const modal = useRef(null);
@@ -40,15 +41,15 @@ export default function FilterPopup({isOpen, onClose}) {
   }, [modal])
 
   function tagSelector() {    
-    const sorterTags = document.getElementById('tagSorter').querySelectorAll('.tag');    
+    const sorterTags = document.getElementById('tagSorter').querySelectorAll(`.${styles.tag}`);
     addActiveTagEventListener(sorterTags);
   }
 
   function addActiveTagEventListener(tags) {
     tags.forEach(tag => {
       tag.addEventListener('click', () => {
-          tags.forEach(btn => btn.classList.remove('active'));
-          tag.classList.add('active');
+          tags.forEach(btn => btn.className = styles.tag);
+          tag.className = styles.activetag;
       });
     });  
   }
@@ -112,9 +113,9 @@ export default function FilterPopup({isOpen, onClose}) {
       }}>Ordenar</span>
       <div id="tagSorter" style={
         {width: "100%", display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-          <button className="tag" data-filter="sort1">Ordem A-Z</button>
-          <button className="tag" data-filter="sort2">Ordem Z-A</button>
-          <button className="tag active" data-filter="sort3">Proximidade</button>          
+          <button className={styles.tag} data-filter="sort1">Ordem A-Z</button>
+          <button className={styles.tag} data-filter="sort2">Ordem Z-A</button>
+          <button className={styles.tag} data-filter="sort3">Proximidade</button>          
       </div>
       
       <div style={
