@@ -1,18 +1,26 @@
 'use client'
 
 import Button from "@/app/components/button";
-import Input from "@/app/components/input";
-import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { useState } from 'react'
+import DynamicRadioButtons from "./dynamicRadioButton";
 
-export default function FilterPopup({enablePopupFunction: any}) {
+export default function FilterPopup({isOpen, onClose}) {
   const modal = useRef(null);
-  const router = useRouter();
-  const [popupEnabled, setEnabled] = useState(true);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const options = [
+    { label: 'No meu estado', value: 'option1' },
+    { label: 'Precisando de voluntários', value: 'option2' },
+    { label: 'Precisando de recursos', value: 'option3' },
+  ];
+
+  const handleOptionSelect = (value) => {
+    setSelectedOption(value);
+  };
 
   const saveFilter = () => {           
-    setEnabled(false);
+    onClose();
   };
 
   useEffect(() => {    
@@ -25,14 +33,14 @@ export default function FilterPopup({enablePopupFunction: any}) {
       iterations: 1
     };
     
+    if(!isOpen) return;
+
     modal.current.animate(appearingFromTop, modalTiming);    
     tagSelector();
   }, [modal])
 
-  function tagSelector() {
-    const filterTags = document.getElementById('tagFilter').querySelectorAll('.tag');
-    const sorterTags = document.getElementById('tagSorter').querySelectorAll('.tag');
-    addActiveTagEventListener(filterTags);
+  function tagSelector() {    
+    const sorterTags = document.getElementById('tagSorter').querySelectorAll('.tag');    
     addActiveTagEventListener(sorterTags);
   }
 
@@ -45,7 +53,7 @@ export default function FilterPopup({enablePopupFunction: any}) {
     });  
   }
 
-  return popupEnabled && (
+  return isOpen && (
     <div 
     ref={modal}    
     style={{
@@ -55,7 +63,7 @@ export default function FilterPopup({enablePopupFunction: any}) {
       width: '100%',
       height: '50%',
       color: "#000000",
-      backgroundColor: "rgba(255, 255, 255, 0.95)",
+      backgroundColor: "rgba(255, 255, 255, 0.99)",
       border: "1px solid rgba(0,0,0,0.5)",
       borderRadius: "5% 5% 0 0",
       padding: "1rem",
@@ -63,7 +71,7 @@ export default function FilterPopup({enablePopupFunction: any}) {
       display: "flex",
       flexWrap: "wrap",
       textAlign: "center",
-      // justifyContent: "center"
+      justifyContent: "space-between"
     }}>
 
       <span style={{
@@ -77,12 +85,19 @@ export default function FilterPopup({enablePopupFunction: any}) {
         justifyContent: "left",
         alignItems: "center"
       }}>Filtrar</span>
-      <div id="tagFilter" className="tag-filter" style={
-        {width: "100%", display: "flex", justifyContent: "left", alignItems: "center"}}>
-          <button className="tag" data-filter="filter1">Placeholder</button>
-          <button className="tag" data-filter="filter2">Placeholder</button>
-          <button className="tag active" data-filter="filter3">Selecionado</button>          
-      </div>
+
+      <button 
+        onClick={onClose} 
+        style={{          
+          class:"close-button",                    
+          backgroundColor: "transparent",
+          border: "none",
+          fontSize: "2rem",          
+          cursor: "pointer",          
+          justifyContent: "initial",          
+        }}>&times;</button>
+      
+      <DynamicRadioButtons options={options} onSelect={handleOptionSelect} />      
 
       <span style={{
         color: "#39542D",
@@ -95,8 +110,8 @@ export default function FilterPopup({enablePopupFunction: any}) {
         justifyContent: "left",
         alignItems: "center"
       }}>Ordenar</span>
-      <div id="tagSorter" className="tag-filter" style={
-        {width: "100%", display: "flex", justifyContent: "left", alignItems: "center"}}>
+      <div id="tagSorter" style={
+        {width: "100%", display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
           <button className="tag" data-filter="sort1">Ordem A-Z</button>
           <button className="tag" data-filter="sort2">Ordem Z-A</button>
           <button className="tag active" data-filter="sort3">Proximidade</button>          
