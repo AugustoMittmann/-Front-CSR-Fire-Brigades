@@ -95,7 +95,7 @@ export default function FilterPopup({isOpen, onClose}) {
           border: "none",
           fontSize: "2rem",          
           cursor: "pointer",          
-          justifyContent: "initial",          
+          justifyContent: "initial",
         }}>&times;</button>
       
       <DynamicRadioButtons options={options} onSelect={handleOptionSelect} />      
@@ -109,7 +109,8 @@ export default function FilterPopup({isOpen, onClose}) {
         fontFamily: "'Montserrat', sans-serif",
         display: "flex",
         justifyContent: "left",
-        alignItems: "center"
+        alignItems: "center",
+        marginBottom: "0.5rem"
       }}>Ordenar</span>
       <div id="tagSorter" style={
         {width: "100%", display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
@@ -119,7 +120,7 @@ export default function FilterPopup({isOpen, onClose}) {
       </div>
       
       <div style={
-        {width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>        
+        {width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
         <Button
           placeholder="Salvar filtros"
           onPress={() => {
@@ -127,6 +128,7 @@ export default function FilterPopup({isOpen, onClose}) {
             document.body.style.opacity = "1";
             saveFilter();
           }}
+          style={styles.saveButton}     
         />
       </div>
     </div>

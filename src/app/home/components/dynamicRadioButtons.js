@@ -17,7 +17,7 @@ const DynamicRadioButtons = ({ options, onSelect }) => {
         <div key={option.value} style={{
             width:"100%", 
             display: "flex",
-            marginBottom: "6px",
+            marginBottom: "0.8rem",
         }}>
           <input
             type="checkbox"
@@ -27,8 +27,10 @@ const DynamicRadioButtons = ({ options, onSelect }) => {
             onChange={handleOptionChange}
             className={styles.radiobutton}
           />
-          <label htmlFor={option.value} style={{
-            font: "normal normal 16px/24px 'Montserrat'"
+          <label htmlFor={option.value} style={{            
+            font: "normal normal normal 16px/20px 'Montserrat'",
+            fontFamily: "'Montserrat', sans-serif",
+            color: "#39542D"
             }}>{option.label}</label>
         </div>
       ))}
