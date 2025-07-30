@@ -43,7 +43,7 @@ export default function GoogleMap({brigadesCoordinates = []}) {
 
   return (
     <APIProvider apiKey={process.env.NEXT_PUBLIC_MAPS_API_KEY}>
-      <div style={{height: "50rem", width: "50rem"}}>
+      <div style={{height: "25rem", width: "25rem"}}>
         <Map defaultCenter={center} defaultZoom={zoom} mapId={process.env.NEXT_PUBLIC_MAP_ID} controlSize={1}>
           {brigadesCoordinates.map(({lat, lng}, index) => (
             <AdvancedMarker
