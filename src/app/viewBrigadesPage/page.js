@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 import GoogleMap from "../components/googleMap";
 import Header from "../components/header";
 import Input from "../components/input";
-import Icons from "../constants/icons";
+import FilterButton from "../home/components/filterButton";
 
 function ViewBrigades() {
   const [isMapVisible, setIsMapVisible] = useState(false);
@@ -22,9 +22,13 @@ function ViewBrigades() {
           <div style={{width: "100%"}}>
             <Input placeholder={"Pesquisar Brigada"} width={"100%"}/>
           </div>
-          <div style={{display: "flex", marginTop: "1rem", width: "100%", justifyContent: "space-between"}}>
+          <div style={{display: "flex", gap: "0.7rem", alignItems: "center", textAlign: "center", marginTop: "1.2rem", width: "100%"}}>
+          <div style={{flexGrow: 1}}>
             <Button placeholder="Mapa" onPress={() => setIsMapVisible(!isMapVisible)}/>
-            <Button placeholder="Filtrar" style={ButtonStyle.standard} secondImage={Icons.filtrar}/>
+          </div>
+          <div style={{flexGrow: 1}}>
+            <FilterButton />
+          </div>
           </div>
           <div style={{marginTop: "0.5rem"}}>
             {isMapVisible && <GoogleMap/>}
