@@ -1,4 +1,3 @@
-import Input from "../components/input";
 import ViewBrigades from "./components/viewBrigadesButton";
 import AddNewBrigade from "./components/addNewBrigade";
 import FilterButton from "./components/filterButton";
@@ -39,6 +38,61 @@ function Home() {
               <FilterButton />
             </div>
           </div>
+        </section>
+        <section>
+        <div className={styles.containerInstagram}>
+          <div className={styles.itemInstagramArrow}> {`<`} </div>
+          <div className={styles.itemInstagram}>
+            <script async src="//www.instagram.com/embed.js" />
+            <blockquote 
+              className="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/apple/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14"
+              style={{ 
+                width: "90%",
+                height: "140px",
+                margin: "0px 0px 10px"
+                }}
+                />
+          </div>
+          <div className={styles.itemInstagramArrow}> {`>`} </div>
+        </div>
+        <div className={styles.containerInstagram}>
+          <div className={styles.itemInstagramArrow}> {`<`} </div>
+          <div className={styles.itemInstagram}>
+            <script async src="//www.instagram.com/embed.js" />
+            <blockquote
+                className="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/instagram/?utm_source=ig_embed&amp;utm_campaign=loading"
+                data-instgrm-version="14"
+                style={{ 
+                  width: "90%",
+                  height: "140px",
+                  margin: "0px 0px 10px"
+                  }}
+                  />
+          </div>
+          <div className={styles.itemInstagramArrow}> {`>`} </div>
+        </div>
+        <div>
+          <blockquote
+            className="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/portalg1/?utm_source=ig_embed&amp;utm_campaign=loading"
+            data-instgrm-version="14"
+            style={{
+              background: "#FFF",
+              border: "0",
+              borderRadius: "3px",
+              boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+              margin: "1px",
+              maxWidth: "1200px",
+              minWidth: "326px",
+              padding: "0",
+              width: "99.375%",
+              width: "calc(100% - 2px)"
+            }}
+          ></blockquote>
+        </div>
         </section>
         <Footer />
       </div></>

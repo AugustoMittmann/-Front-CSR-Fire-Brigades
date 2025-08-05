@@ -44,3 +44,16 @@
 .buttonSearch{
     flex-grow: 4;
 }
+
+.containerInstagram {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemInstagramArrow {
+    width: 5%;
+}
+.itemInstagram {
+    width: 90%;
+}
