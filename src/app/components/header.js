@@ -2,21 +2,27 @@ import styles from "./header.module.css";
 import MenuButton from "../home/components/menuButton";
 import HelpButton from "../home/components/helpButton";
 import Link from "next/link";
-import Logo from "./logo";
+import Image from "next/image";
+import Icons from "../constants/icons";
 
 export default function Header() {
     return (
       <header className={styles.header}>
-        <div className={styles.menuLeft}>
+        <div>
           <MenuButton />
         </div>
-        <div className={styles.menuCenter}>
+        <div>
           <Link href="/home">
-            <Logo />
+            <Image
+              src={Icons.logo.value}
+              alt={Icons.logo.alt}
+              height={80}
+              width={80}
+            />
           </Link>
         </div>
         <Link href="/FAQPage">
-          <div className={styles.menuRight}>
+          <div>
             <HelpButton />
           </div>
         </Link>

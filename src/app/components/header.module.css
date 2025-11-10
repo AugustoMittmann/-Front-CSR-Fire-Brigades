@@ -1,9 +1,10 @@
 .header {
-  height: 5rem;
+  height: 5.5rem;
   width: 100%;
   background-color: #39542D;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  padding: 0rem 0.6rem;
 }
