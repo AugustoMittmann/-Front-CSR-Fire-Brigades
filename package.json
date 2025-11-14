@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.4.2",
     "@vis.gl/react-google-maps": "^1.5.3",
     "eslint-config-next": "^15.0.3",
     "next": "^15.0.3",
