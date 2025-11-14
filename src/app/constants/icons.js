@@ -21,6 +21,7 @@ import up from "../icons/up.svg"
 import uplaranja from "../icons/uplaranja.svg"
 import voltar from "../icons/voltar.svg"
 import logo from "../icons/logo.svg"
+import loading from "../icons/loading.svg"
 
 const Icons = {
   adicionar: {
@@ -114,6 +115,10 @@ const Icons = {
   logo: {
     value: logo,
     alt: "Logo"
+  },
+  loading: {
+    value: loading,
+    alt: "Loading"
   }
 };
 

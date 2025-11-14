@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Montserrat } from 'next/font/google';
+import { Providers } from "./home/providers";
 
 export const metadata = {
   title: "Conexão Brigada",
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={font.className}>
-        {children}
+        <Providers>{children}</Providers> 
       </body>
     </html>
   );
