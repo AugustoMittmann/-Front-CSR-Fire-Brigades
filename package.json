@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.4.0",
+    "@auth0/nextjs-auth0": "^4.9.0",
     "@vis.gl/react-google-maps": "^1.5.3",
     "eslint-config-next": "^15.0.3",
     "next": "^15.0.3",
