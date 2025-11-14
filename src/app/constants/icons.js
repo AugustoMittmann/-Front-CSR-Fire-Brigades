@@ -20,6 +20,8 @@ import toggle from "../icons/Toggle.svg"
 import up from "../icons/up.svg"
 import uplaranja from "../icons/uplaranja.svg"
 import voltar from "../icons/voltar.svg"
+import logo from "../icons/logo.svg"
+import loading from "../icons/loading.svg"
 
 const Icons = {
   adicionar: {
@@ -109,6 +111,14 @@ const Icons = {
   voltar: {
     value: voltar,
     alt: "Voltar"
+  },
+  logo: {
+    value: logo,
+    alt: "Logo"
+  },
+  loading: {
+    value: loading,
+    alt: "Loading"
   }
 };
 
