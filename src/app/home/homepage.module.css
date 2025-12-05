@@ -2,6 +2,12 @@
     flex: 1;
 }
 
+.firstSection {
+    flex: 1;
+    padding: 1.5rem 1.5rem;
+    background-color: green;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -13,7 +19,8 @@
     font-weight: bold;
     font-size: 14pt;
     margin-bottom: 0.5rem; 
-    color: #263A1E;
+    color: #ffffff;
+    text-align: center;
 }
 .feedTitle {
     font-weight: bold;
