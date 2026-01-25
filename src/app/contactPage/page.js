@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Button, { ButtonStyle } from "../components/button";
-import Header from "../components/header";
 import Input from "../components/input";
 import Select from "../components/select";
 import StateCodes from "../constants/estados";
@@ -10,7 +9,6 @@ import MotivoContato, { MotivoContatoChave } from "../constants/motivoContato";
 import "./css.css";
 import CitiesByState from "../constants/cidadesPorEstado";
 import { useRouter } from "next/navigation";
-import Footer from "../components/footer";
 import SaveModal from "../components/saveModal";
 
 function Contact() {
@@ -41,7 +39,6 @@ function Contact() {
   return (
     <>
       <div style={{opacity: isSaveSuccess ? "0.5" : "1", transition: "opacity 0.5s"}}>
-        <Header/>
         <div style={{margin: "1rem"}}>
           <div style={{display: "flex", flexWrap: "wrap"}}>
             <span style={{color: "#39542D", fontWeight: "bolder", fontSize: "1rem", width: "100%", marginBottom: "1rem", font: "normal normal bold 24px/29px 'Montserrat'", fontFamily: "'Montserrat', sans-serif"}}>Contato</span>
@@ -92,7 +89,6 @@ function Contact() {
             />
           </div>
         </div>
-        <Footer/>
       </div>
       {isSaveSuccess && <SaveModal/>}
     </>

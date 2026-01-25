@@ -40,3 +40,46 @@ a {
     color-scheme: light;
   }
 }
+
+.title {
+  font-weight: bold;
+  font-size: 14pt;
+  margin-bottom: 0.5rem;
+  color: #263A1E;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.section {
+  padding: 1.5rem 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
