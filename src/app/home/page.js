@@ -7,6 +7,9 @@ import Header from "../components/header";
 import styles from "./homepage.module.css";
 import SearchBar from "./components/searchbar";
 import ViewCampaigns from "./components/viewCampaignsButton";
+import LatestNews from "./components/latestNews";
+import DemographicCensus from "./components/demographicCensus";
+import Contact from "./components/contactButton";
 
 function Home() {
     return (
@@ -17,8 +20,11 @@ function Home() {
           <div className={styles.brigadasTitle}>
             CONECTANDO BRIGADAS POR TODO O BRASIL
           </div>
-          <div className={styles.viewBrigadesButton}>
+          <div>
             <ViewCampaigns />
+          </div>
+          <div>
+            <LatestNews/>
           </div>
         </section>
         <section className={styles.section}>
@@ -28,27 +34,30 @@ function Home() {
           <div>
             Encontre as brigadas mais próximas de você ou cadastre a sua brigada.
           </div>
-          <div className={styles.viewBrigadesButton}>
+
+          <div>
             <ViewBrigades />
           </div>
           <div>
-            <AddNewBrigade />
+            <Contact />
+          </div>       
+        </section>
+
+        <section className={styles.footerSection}>
+          <div className={styles.footerTitle}>
+            Conecte-se com a RNBV!
           </div>
-          <div className={styles.feedTitle}>
-            Feed de Notícias
+          <div className={styles.footerText}>
+            Contribua com as informações da sua brigada voluntária! 
+            O Brasil precisa saber quantos somos e quantos grupos 
+            não governamentais que atuam na prevenção 
+            e combate ao fogo existem.
           </div>
           <div>
-            Encontre aqui as publicações de nossas brigadas voluntárias nas redes sociais.
-          </div>
-          <div className={styles.filterSide}>
-            <div className={styles.searchBar}>
-              <SearchBar placeholder="Pesquisar Notícia" />
-            </div>
-            <div className={styles.buttonSearch}>
-              <FilterButton />
-            </div>
+            <DemographicCensus/>
           </div>
         </section>
+
         <Footer />
       </div></>
     );

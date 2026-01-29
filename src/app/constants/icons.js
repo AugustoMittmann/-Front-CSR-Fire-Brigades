@@ -22,6 +22,7 @@ import uplaranja from "../icons/uplaranja.svg"
 import voltar from "../icons/voltar.svg"
 import logo from "../icons/logo.svg"
 import loading from "../icons/loading.svg"
+import mail from "../icons/mail.svg"
 
 const Icons = {
   adicionar: {
@@ -119,6 +120,10 @@ const Icons = {
   loading: {
     value: loading,
     alt: "Loading"
+  },
+  mail: {
+    value: mail,
+    alt: "Mail"
   }
 };
 
