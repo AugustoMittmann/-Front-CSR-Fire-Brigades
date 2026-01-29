@@ -1,7 +1,3 @@
-.section {
-    flex: 1;
-}
-
 .firstSection {
     padding: 1.5rem 1.5rem;
     background-color: #466f34;
@@ -11,10 +7,16 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-
+}
 
 .brigadasTitle {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 2.5rem; 
+    color: #363a1e;
+}
+
+.brigadasTitleWhite {
     font-weight: bold;
     font-size: 14pt;
     margin-bottom: 2.5rem; 
