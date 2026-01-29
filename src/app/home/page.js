@@ -15,7 +15,6 @@ function Home() {
     return (
       <>
       <div className={styles.wrapper}>
-        <Header />
         <section className={styles.firstSection}>
           <div className={styles.brigadasTitle}>
             CONECTANDO BRIGADAS POR TODO O BRASIL
@@ -58,7 +57,6 @@ function Home() {
           </div>
         </section>
 
-        <Footer />
       </div></>
     );
   }
