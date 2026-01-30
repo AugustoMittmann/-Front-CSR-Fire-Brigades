@@ -1,0 +1,28 @@
+<svg width="350" height="180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A90A4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="350" height="180" fill="url(#skyGradient)"/>
+
+  <!-- Mountains/hills -->
+  <path d="M0,120 Q87.5,80 175,120 T350,120 L350,180 L0,180 Z" fill="#2D5016" opacity="0.7"/>
+  <path d="M0,140 Q87.5,110 175,140 T350,140 L350,180 L0,180 Z" fill="#39542D" opacity="0.8"/>
+
+  <!-- Silhouettes of people/brigade members -->
+  <ellipse cx="70" cy="130" rx="12" ry="15" fill="#1a1a1a" opacity="0.6"/>
+  <ellipse cx="70" cy="145" rx="18" ry="12" fill="#1a1a1a" opacity="0.6"/>
+
+  <ellipse cx="140" cy="125" rx="12" ry="15" fill="#1a1a1a" opacity="0.6"/>
+  <ellipse cx="140" cy="140" rx="18" ry="12" fill="#1a1a1a" opacity="0.6"/>
+
+  <ellipse cx="210" cy="128" rx="12" ry="15" fill="#1a1a1a" opacity="0.6"/>
+  <ellipse cx="210" cy="143" rx="18" ry="12" fill="#1a1a1a" opacity="0.6"/>
+
+  <ellipse cx="280" cy="132" rx="12" ry="15" fill="#1a1a1a" opacity="0.6"/>
+  <ellipse cx="280" cy="147" rx="18" ry="12" fill="#1a1a1a" opacity="0.6"/>
+</svg>

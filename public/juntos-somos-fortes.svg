@@ -1,0 +1,35 @@
+<svg width="390" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="390" height="200" fill="url(#darkGradient)"/>
+
+  <!-- Fire effect at bottom -->
+  <ellipse cx="195" cy="180" rx="150" ry="40" fill="#FF6B35" opacity="0.4"/>
+  <ellipse cx="195" cy="185" rx="120" ry="30" fill="#FF8C42" opacity="0.6"/>
+  <ellipse cx="195" cy="190" rx="90" ry="20" fill="#FFA552" opacity="0.8"/>
+
+  <!-- Text: JUNTOS SOMOS MAIS FORTES -->
+  <text x="195" y="90" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="700" fill="white" text-anchor="middle">
+    JUNTOS
+  </text>
+  <text x="195" y="125" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="400" fill="white" text-anchor="middle">
+    SOMOS MAIS
+  </text>
+  <text x="195" y="155" font-family="Montserrat, Arial, sans-serif" font-size="32" font-weight="700" fill="white" text-anchor="middle">
+    FORTES
+  </text>
+
+  <!-- Logo circle in corner -->
+  <circle cx="340" cy="150" r="35" fill="white" opacity="0.9"/>
+  <circle cx="340" cy="150" r="30" fill="#39542D"/>
+  <path d="M340,135 L345,145 L340,155 L335,145 Z" fill="#FF6B35"/>
+  <text x="340" y="170" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="white" text-anchor="middle">
+    RNBV
+  </text>
+</svg>
