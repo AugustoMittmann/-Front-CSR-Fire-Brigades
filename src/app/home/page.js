@@ -4,6 +4,8 @@ import ViewCampaigns from "./components/viewCampaignsButton";
 import LatestNews from "./components/latestNews";
 import DemographicCensus from "./components/demographicCensus";
 import Contact from "./components/contactButton";
+import CampaignsCarousel from "./components/campaignsCarousel";
+import LearnMoreButton from "./components/learnMoreButton";
 
 function Home() {
   return (
@@ -26,6 +28,8 @@ function Home() {
         <div>
           Encontre aqui as publicações das campanhas da RBNV pelo Brasil.
         </div>
+        <CampaignsCarousel />
+        <LearnMoreButton />
       </section>   
       
       <section className={styles.section}>

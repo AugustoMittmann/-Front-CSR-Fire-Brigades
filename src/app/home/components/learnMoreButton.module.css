@@ -1,0 +1,38 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #39542D;
+  background-color: transparent;
+  border: 2px solid #39542D;
+  border-radius: 25px;
+  margin-top: 1.5rem;
+  height: 50px;
+  max-width: 100%;
+  padding: 0 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.button:hover {
+  background-color: #39542D;
+  color: #FFFFFF;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
+}
+
+.button:hover .icon {
+  filter: brightness(0) invert(1);
+}
+
+.content {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
