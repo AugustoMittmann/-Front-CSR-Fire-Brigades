@@ -8,19 +8,19 @@ export default function CampaignsCarousel() {
   const campaigns = [
     {
       id: 1,
-      image: "../../images/campaign1.jpeg",
+      image: "/images/campaign1.jpeg",
       title: "Título da Campanha",
       description: "Breve resumo da campanha",
     },
     {
       id: 2,
-      image: "src/app/images/campaign2.jpeg",
+      image: "/images/campaign2.jpeg",
       title: "Campanha Exemplo",
       description: "Outro resumo campanha x",
     },
     {
       id: 3,
-      image: "/placeholder3.jpg",
+      image: "/images/campaign3.jpeg",
       title: "Outro título",
       description: "Resumo diferente",
     },
@@ -60,8 +60,11 @@ export default function CampaignsCarousel() {
         {visibleCampaigns.map((campaign, index) => (
           <div key={`${campaign.id}-${index}`} className={styles.campaignCard}>
             <div className={styles.imageContainer}>
-              <div className={styles.placeholderImage}>                
-              </div>
+              <img 
+                src={campaign.image} 
+                alt={campaign.title}
+                className={styles.campaignImage}
+              />
             </div>
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{campaign.title}</h3>
