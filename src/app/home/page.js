@@ -21,6 +21,21 @@ function Home() {
       </section>
       <section className={styles.section}>
         <div className={styles.brigadasTitle}>
+          Descubra Nossas Campanhas
+        </div>
+        <div>
+          Encontre aqui as publicações das campanhas da RBNV pelo Brasil.
+        </div>
+
+        <div>
+          <ViewBrigades />
+        </div>
+        <div>
+          <Contact />
+        </div>       
+      </section>
+      <section className={styles.section}>
+        <div className={styles.brigadasTitle}>
           Conheça nossas brigadas
         </div>
         <div>

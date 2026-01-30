@@ -1,6 +1,10 @@
 .firstSection {
     padding: 1.5rem 1.5rem;
     background-color: #466f34;
+    background-image: url('../icons/Artboard 4 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -12,7 +16,7 @@
 .brigadasTitle {
     font-weight: bold;
     font-size: 14pt;
-    margin-bottom: 2.5rem; 
+    margin-bottom: 1.0rem; 
     color: #363a1e;
 }
 
