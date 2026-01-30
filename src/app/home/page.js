@@ -25,16 +25,16 @@ function Home() {
         </div>
         <div>
           Encontre aqui as publicações das campanhas da RBNV pelo Brasil.
-        </div>   
-      </section>
+        </div>
+      </section>   
+      
       <section className={styles.section}>
         <div className={styles.brigadasTitle}>
           Conheça nossas brigadas
         </div>
         <div>
           Encontre as brigadas mais próximas de você ou cadastre a sua brigada.
-        </div>
-
+        </div>    
         <div className={styles.statsContainer}>
           <div className={styles.statBlock}>
             <div className={styles.statNumber}>15</div>
@@ -56,7 +56,8 @@ function Home() {
         <div>
           <Contact />
         </div>       
-      </section>
+      </section>  
+          
       <section className={styles.footerSection}>
         <div className={styles.footerTitle}>
           Conecte-se com a RNBV!
