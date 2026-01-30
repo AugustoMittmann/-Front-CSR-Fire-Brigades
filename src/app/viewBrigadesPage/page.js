@@ -4,7 +4,6 @@ import { useState } from "react";
 import Button from "../components/button";
 import Footer from "../components/footer";
 import GoogleMap from "../components/googleMap";
-import Header from "../components/header";
 import Input from "../components/input";
 import FilterButton from "../home/components/filterButton";
 
@@ -13,7 +12,6 @@ function ViewBrigades() {
 
   return (
     <>
-      <Header/>
       <div style={{margin: "1rem"}}>
         <div style={{display: "flex", flexWrap: "wrap"}}>
           <span style={{color: "#39542D", fontWeight: "bolder", fontSize: "1rem", width: "100%", marginBottom: "1rem", font: "normal normal bold 24px/29px 'Montserrat'", fontFamily: "'Montserrat', sans-serif"}}>Visualizar Brigadas</span>
@@ -35,7 +33,6 @@ function ViewBrigades() {
           </div>
         </div>
       </div>
-      <Footer/>
     </>
   );
 }

@@ -23,7 +23,7 @@ export default function SearchBar({label, placeholder, height, type = "text", di
           <Label text={label}/>
         </div>
       }
-      <div>
+      <div className='position-relative'>
         <input
           ref={inputRef}
           className={getStyle()}
@@ -32,12 +32,12 @@ export default function SearchBar({label, placeholder, height, type = "text", di
           type={type}
           style={{height}}
         />
-        <div className={styles.icon}>
+        <i className={styles.icon}>
           <Image
             src={Icons.pesquisarverde.value}
             alt={Icons.pesquisarverde.alt}
             height={20}/>
-        </div>
+        </i>
         <br />
       </div>
     </>

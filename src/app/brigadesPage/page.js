@@ -1,9 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import Header from "../components/header";
 import Image from "next/image";
-import Footer from "../components/footer";
 import Icons from "../constants/icons";
 
 function Brigades() {
@@ -12,7 +10,6 @@ function Brigades() {
 
   return (
     <div style={{opacity: "1", transition: "opacity 0.5s"}}>
-      <Header/>
       <div>
         <span style={{color: "#39542D", fontWeight: "bolder", width: "100%", marginBottom: "1rem", font: "bold bold bold 20px/24px 'Montserrat'", fontFamily: "'Montserrat', sans-serif"}}>Perfil da Brigada</span>
         <div style={{display: "flex"}}>
@@ -29,7 +26,6 @@ function Brigades() {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
     );
 }
