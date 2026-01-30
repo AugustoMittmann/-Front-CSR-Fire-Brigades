@@ -4,13 +4,15 @@ import Icons from "../constants/icons";
 import Table from "../components/table";
 import Select from "../components/select";
 import Map from "../components/googleMap";
+import { POST } from "./prototype_location_converter";
 
-function TestComponents() {
+async function TestComponents() {
   const mockedItems = [
     {key: "1", value: "Item 1"},
     {key: "2", value: "Item 2"},
     {key: "3", value: "Item 3"}
   ];
+  console.log(await POST({json: async () => ({address: "Avenida SAP, 188 - Cristo Rei, São Leopoldo - RS, 93022-718"})}));
 
   return (
     <div style={{backgroundColor: "#F6F6F6", height: "100rem"}}>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import Button, { ButtonStyle } from "../components/button";
+import Button from "../components/button";
 import Footer from "../components/footer";
 import GoogleMap from "../components/googleMap";
 import Input from "../components/input";
