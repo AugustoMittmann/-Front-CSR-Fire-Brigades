@@ -25,14 +25,7 @@ function Home() {
         </div>
         <div>
           Encontre aqui as publicações das campanhas da RBNV pelo Brasil.
-        </div>
-
-        <div>
-          <ViewBrigades />
-        </div>
-        <div>
-          <Contact />
-        </div>       
+        </div>   
       </section>
       <section className={styles.section}>
         <div className={styles.brigadasTitle}>
@@ -40,6 +33,21 @@ function Home() {
         </div>
         <div>
           Encontre as brigadas mais próximas de você ou cadastre a sua brigada.
+        </div>
+
+        <div className={styles.statsContainer}>
+          <div className={styles.statBlock}>
+            <div className={styles.statNumber}>15</div>
+            <div className={styles.statLabel}>Organizações</div>
+          </div>
+          <div className={styles.statBlock}>
+            <div className={styles.statNumber}>932</div>
+            <div className={styles.statLabel}>Brigadistas</div>
+          </div>
+          <div className={styles.statBlock}>
+            <div className={styles.statNumber}>8</div>
+            <div className={styles.statLabel}>Estados pelo Brasil</div>
+          </div>
         </div>
 
         <div>
