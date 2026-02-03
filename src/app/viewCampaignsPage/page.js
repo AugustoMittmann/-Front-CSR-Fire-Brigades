@@ -45,8 +45,6 @@ export default function ArtigosPage() {
 
   return (
     <div className={styles.pageWrapper}>
-      <Header />
-
       <main className={styles.mainContent}>
         <div className={styles.titleContainer}>
           <h1 className={styles.pageTitle}>Artigos e Notícias</h1>
